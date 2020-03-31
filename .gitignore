@@ -1,0 +1,51 @@
+##########################
+# Mikefile Build
+##########################
+build_msvc
+build_clangcl
+build_mingw
+build_doxygen
+
+##########################
+# Cmake Project Auxiliary
+##########################
+# Clion 
+cmake-build-debug
+# VS
+out
+
+##########################
+# Editor: clion, VS
+##########################
+.idea
+.vs
+.vscode
+
+##########################
+# Git
+##########################
+.git
+
+##########################
+.DS_Store
+*~
+*.vcxproj.user
+*.VC.db
+*.dylib
+*.sd
+*.so
+*.o
+*.obj
+*.log
+*.idb
+*.pdb
+*.tlog
+*.lastbuildstate
+project.xcworkspace
+xcuserdata
+macos/vkQuake2
+debugx64
+releasex64
+Debug
+Release
+Quake2

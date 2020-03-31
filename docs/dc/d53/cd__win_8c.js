@@ -1,0 +1,26 @@
+var cd__win_8c =
+[
+    [ "CDAudio_CloseDoor", "dc/d53/cd__win_8c.html#a756cef0628a465f56bad462f3b3b68b2", null ],
+    [ "CDAudio_Eject", "dc/d53/cd__win_8c.html#af7c331c29a5e6f781e396fbe12d2f62f", null ],
+    [ "CDAudio_GetAudioDiskInfo", "dc/d53/cd__win_8c.html#aff3eefd0804807dacf50bfb242b0b29a", null ],
+    [ "CDAudio_Pause", "dc/d53/cd__win_8c.html#af763dd717e691176780eba76fee8911c", null ],
+    [ "CDAudio_Play", "dc/d53/cd__win_8c.html#ae7abdc5778b2e735300679257d955dce", null ],
+    [ "CDAudio_Play2", "dc/d53/cd__win_8c.html#a46417994eee13ea78bd7d070d5e4e617", null ],
+    [ "CDAudio_RandomPlay", "dc/d53/cd__win_8c.html#a53202a8774d49b59cf532db266649ad1", null ],
+    [ "cd_loopcount", "dc/d53/cd__win_8c.html#a32904ba15d0918a9bc09ad380449e9cd", null ],
+    [ "cd_looptrack", "dc/d53/cd__win_8c.html#ae91cf03b51d1c6c2474de3708fbc103e", null ],
+    [ "cd_nocd", "dc/d53/cd__win_8c.html#a29b246b23dbde3d0107c4c2f4a88a7c5", null ],
+    [ "cdrom", "dc/d53/cd__win_8c.html#ab919681b3db86e47776611491b494449", null ],
+    [ "cdValid", "dc/d53/cd__win_8c.html#afc77f017a6a90a96d0705266a9f2d47b", null ],
+    [ "cl_hwnd", "dc/d53/cd__win_8c.html#a2084923bda86a1bc7f92a6e5b50c7b18", null ],
+    [ "enabled", "dc/d53/cd__win_8c.html#aafa83fa4b66de42ce00c4a018788a5ee", null ],
+    [ "initialized", "dc/d53/cd__win_8c.html#a4868d195c690d5af6b27916b2aaceae6", null ],
+    [ "loopcounter", "dc/d53/cd__win_8c.html#af3df076e8adb1b0c4ae035e73b4b626b", null ],
+    [ "maxTrack", "dc/d53/cd__win_8c.html#a84b057cd73340b4318317ab9889b2de0", null ],
+    [ "playing", "dc/d53/cd__win_8c.html#a959e9719a98100ba25a33f73a444f339", null ],
+    [ "playLooping", "dc/d53/cd__win_8c.html#abf62c76d4522e06f8d6b0fc830ad7d9e", null ],
+    [ "playTrack", "dc/d53/cd__win_8c.html#ac9540b877b886209970d9e3969d73745", null ],
+    [ "remap", "dc/d53/cd__win_8c.html#ac91fd4e859f1c0fccf131fa6cb04c6c9", null ],
+    [ "wasPlaying", "dc/d53/cd__win_8c.html#a91b871988df5e2fbd55e02dedaad337a", null ],
+    [ "wDeviceID", "dc/d53/cd__win_8c.html#a7dbc35e479180d2b425f7d9206961db1", null ]
+];

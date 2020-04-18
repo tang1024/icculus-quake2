@@ -59,20 +59,20 @@ $(error arch $(ARCH) is currently not supported)
 endif
 endif
 
-CC=gcc
+CC=gcc3
 
 ifeq ($(ARCH),sparc)
-RELEASE_CFLAGS=$(BASE_CFLAGS) -ffast-math -funroll-loops \
+RELEASE_CFLAGS=$(BASE_CFLAGS) -O4 -mcpu=ultrasparc -mtune=ultrasparc -ffast-math -funroll-loops \
 	-fomit-frame-pointer -fexpensive-optimizations
 endif
 
 ifeq ($(ARCH),i386)
-RELEASE_CFLAGS=$(BASE_CFLAGS) -O2 -ffast-math -funroll-loops -malign-loops=2 \
+RELEASE_CFLAGS=$(BASE_CFLAGS) -O3 -ffast-math -funroll-loops -malign-loops=2 \
 	-malign-jumps=2 -malign-functions=2 -g
 endif
 
-VERSION=3.21+r0.16.0
-PKG_VERSION=r0.16.0
+VERSION=3.21+r0.16.1
+PKG_VERSION=r0.16.1
 
 MOUNT_DIR=src
 
@@ -132,11 +132,12 @@ endif
 # For the SunRay Terminal..
 OPENWINHOME=/usr/openwin
 CORONA_BASE_DIR = whatever/src/newt/videolib
+JPEG_BASE_DIR = /usr/sfw
 
 XCFLAGS=-I$(OPENWINHOME)/include
 XLDFLAGS=$(LDFLAGS) -L$(OPENWINHOME)/lib -lX11 -lxil
 
-GLXCFLAGS=-I$(OPENWINHOME)/include
+GLXCFLAGS=-I$(OPENWINHOME)/include -DOPENGL
 GLXLDFLAGS=-L$(OPENWINHOME)/lib -lGL
 
 SDLCFLAGS=$(shell sdl-config --cflags)
@@ -152,8 +153,9 @@ XILCFLAGS=-I$(OPENWINHOME)/include
 XILLDFLAGS=-L$(OPENWINHOME)/lib -lxil
 
 ifeq ($(strip $(BUILD_QMAX)),YES)
-GLXLDFLAGS+=-ljpeg
-SDLGLLDFLAGS+=-ljpeg
+GLXCFLAGS+=-I$(JPEG_BASE_DIR)/include
+GLXLDFLAGS+=-L$(JPEG_BASE_DIR)/lib -ljpeg
+SDLGLLDFLAGS+=-L$(JPEG_BASE_DIR)/lib -ljpeg
 REF_GL_DIR = $(MOUNT_DIR)/ref_candygl
 CL_FX = cl_fxmax.c
 else
@@ -444,7 +446,7 @@ $(BUILDDIR)/client/cl_cin.o :     $(CLIENT_DIR)/cl_cin.c
 $(BUILDDIR)/client/cl_ents.o :    $(CLIENT_DIR)/cl_ents.c
 	$(DO_CC)
 
-$(BUILDDIR)/client/cl_fx.o :      $(CLIENT_DIR)/cl_fx.c
+$(BUILDDIR)/client/cl_fx.o :      $(CLIENT_DIR)/$(CL_FX)
 	$(DO_CC)
 
 $(BUILDDIR)/client/cl_input.o :   $(CLIENT_DIR)/cl_input.c

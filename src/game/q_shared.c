@@ -302,10 +302,6 @@ float	anglemod(float a)
 	return a;
 }
 
-	int		i;
-	vec3_t	corners[2];
-
-
 // this is the slow, general version
 int BoxOnPlaneSide2 (vec3_t emins, vec3_t emaxs, struct cplane_s *p)
 {
@@ -345,7 +341,7 @@ BoxOnPlaneSide
 Returns 1, 2, or 1 + 2
 ==================
 */
-#if !id386 || defined __linux__ || defined __FreeBSD__ || defined __sun__
+#if !id386 || defined __linux__ || defined __FreeBSD__ || defined __sun || defined __sgi
 int BoxOnPlaneSide (vec3_t emins, vec3_t emaxs, struct cplane_s *p)
 {
 	float	dist1, dist2;

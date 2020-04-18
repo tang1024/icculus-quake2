@@ -522,9 +522,9 @@ void MakeSkyVec (float s, float t, int axis)
 	vec3_t		v, b;
 	int			j, k;
 
-	b[0] = s*2300;
-	b[1] = t*2300;
-	b[2] = 2300;
+	b[0] = s * 4096.0;
+	b[1] = t * 4096.0;
+	b[2] = 4096.0;
 
 	for (j=0 ; j<3 ; j++)
 	{

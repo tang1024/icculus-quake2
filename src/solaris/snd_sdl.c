@@ -22,7 +22,7 @@
 		59 Temple Place - Suite 330
 		Boston, MA  02111-1307, USA
 
-	$Id: snd_sdl.c,v 1.1 2002/04/02 01:37:57 bburns Exp $
+	$Id: snd_sdl.c 68 2002-04-02 01:40:22Z bburns $
 */
 
 #include "SDL.h"

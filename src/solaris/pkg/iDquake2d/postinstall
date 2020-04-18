@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# @(#)postinstall	$Id: postinstall,v 1.2 2002/09/25 13:22:56 bburns Exp $
+# @(#)postinstall	$Id: postinstall 119 2002-09-25 13:22:56Z bburns $
 #
 # postinstall script for quake2
 

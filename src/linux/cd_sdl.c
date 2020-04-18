@@ -23,7 +23,7 @@
 		59 Temple Place - Suite 330
 		Boston, MA  02111-1307, USA
 
-	$Id: cd_sdl.c,v 1.5 2002/02/16 19:03:06 relnev Exp $
+	$Id: cd_sdl.c 56 2002-02-16 19:03:06Z relnev $
 */
 
 #include <stdio.h>

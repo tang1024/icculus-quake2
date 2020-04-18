@@ -53,7 +53,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define CPUSTRING "Unknown"
 #endif
 
-#elif defined __sun__
+#elif defined __sun
 
 #define BUILDSTRING "Solaris"
 
@@ -63,11 +63,22 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define CPUSTRING "sparc"
 #endif
 
+#elif defined __sgi
+#define BUILDSTRING "IRIX"
+#define CPUSTRING "mips"
+
 #else	// !WIN32
 
 #define BUILDSTRING "NON-WIN32"
 #define	CPUSTRING	"NON-WIN32"
 
+#endif
+
+#ifndef DEFAULT_BASEDIR
+# define DEFAULT_BASEDIR "."
+#endif
+#ifndef DEFAULT_LIBDIR
+# define DEFAULT_LIBDIR DEFAULT_BASEDIR
 #endif
 
 //============================================================================

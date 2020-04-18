@@ -1,4 +1,4 @@
-/* $Id: gl_mesh.c,v 1.3 2002/09/25 13:22:55 bburns Exp $
+/* $Id: gl_mesh.c 119 2002-09-25 13:22:56Z bburns $
  *
  * triangle model functions
  *

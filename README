@@ -31,7 +31,6 @@ The resulting binaries are then put in releasei386.
 
 Known Bugs
 ------------
-ALSA sound support is not 100% there.  I would stick with SDL or OSS for now.
 
 
 Makefile options:
@@ -303,6 +302,7 @@ game <subdir>           // load the quake2 mod in that directory
 sensitivity <int>       // Adjust the sensivity (accelleration) of the mouse.
 crosshair <int>		// Choose your crosshair [1-3] Normal [1-9] Q2Max
 crosshair_scale <int>   // Scale your crosshair (Q2Max only for now...)
+skydistance <int>	// Modify the skybox distance (useful for large maps)
 
 When using these commands on the quake2 command line, use +set to cause the
 variables be set before the config files are loaded (important for
@@ -346,11 +346,9 @@ Mailing List and Contact:
 to subscribe: send a blank email to quake2-subscribe@icculus.org
 to post: send email to quake2@icculus.org
 
-Anonymous CVS access:
+SVN access:
 ---------------------
-cvs -d:pserver:anonymous@icculus.org:/cvs/cvsroot login
-      (password is "anonymous" without the quotes.)
-cvs -z3 -d:pserver:anonymous@icculus.org:/cvs/cvsroot co quake2
+svn co svn://svn.icculus.org/quake2/trunk/ quake2
 
 Bugzilla:
 ---------
@@ -374,6 +372,7 @@ Wesley Bear
 Robert Bäuml
 Vincent Cojot
 Michel Dänzer
+Jay Dolan (ALSA Support)
 Ryan C. Gordon
 Angelo Grossini
 Nicolai Haehnle
@@ -390,6 +389,10 @@ Karen Pouelle
 Toni Spets
 Nicolas Regnault
 Nick Warne
+
+v 0.17 [??/??/??]
+Added skybox cvar (Nick Warne)
+Fixed ALSA Support (Jay Dolan)
 
 v 0.16 [09/13/04]
 Load more pakfiles [Toni Spets]

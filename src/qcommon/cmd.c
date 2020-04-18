@@ -215,7 +215,12 @@ void Cbuf_Execute (void)
 			if (text[i] == '\n')
 				break;
 		}
-			
+		
+		// sku - removed potentional buffer overflow vulnerability
+		if( i > sizeof( line ) - 1 ) {
+		  i = sizeof( line ) - 1;
+		}
+	
 				
 		memcpy (line, text, i);
 		line[i] = 0;
@@ -657,7 +662,9 @@ void Cmd_TokenizeString (char *text, qboolean macroExpand)
 		{
 			int		l;
 
-			strcpy (cmd_args, text);
+			// sku - removed potentional buffer overflow 
+			//   vulnerability
+			strncpy( cmd_args, text, sizeof( cmd_args ) );
 
 			// strip off any trailing whitespace
 			l = strlen(cmd_args) - 1;
@@ -774,6 +781,7 @@ char *Cmd_CompleteCommand (char *partial)
 	cmd_function_t	*cmd;
 	int				len;
 	cmdalias_t		*a;
+	cvar_t *cvar;
 	
 	len = strlen(partial);
 	
@@ -787,7 +795,7 @@ char *Cmd_CompleteCommand (char *partial)
 	for (a=cmd_alias ; a ; a=a->next)
 		if (!strcmp (partial, a->name))
 			return a->name;
-
+	
 // check for partial match
 	for (cmd=cmd_functions ; cmd ; cmd=cmd->next)
 		if (!strncmp (partial,cmd->name, len))
@@ -795,7 +803,7 @@ char *Cmd_CompleteCommand (char *partial)
 	for (a=cmd_alias ; a ; a=a->next)
 		if (!strncmp (partial, a->name, len))
 			return a->name;
-
+	
 	return NULL;
 }
 

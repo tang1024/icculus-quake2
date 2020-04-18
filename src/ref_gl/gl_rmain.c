@@ -700,7 +700,6 @@ R_SetupGL
 void R_SetupGL (void)
 {
 	float	screenaspect;
-//	float	yfov;
 	int		x, x2, y2, y, w, h;
 
 	//
@@ -723,7 +722,7 @@ void R_SetupGL (void)
 //	yfov = 2*atan((float)r_newrefdef.height/r_newrefdef.width)*180/M_PI;
 	qglMatrixMode(GL_PROJECTION);
     qglLoadIdentity ();
-    MYgluPerspective (r_newrefdef.fov_y,  screenaspect,  4,  4096);
+    MYgluPerspective (r_newrefdef.fov_y,  screenaspect,  4,  8192);
 
 	qglCullFace(GL_FRONT);
 
